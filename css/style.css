@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'ubuntu-bold';
+    src: url('fonts/ubuntu_bold.ttf');
+}
+
+@font-face {
+    font-family: 'ubuntu-light';
+    src: url('fonts/ubuntu_light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'ubuntu-light';
+    background-color: #af4448;
+    height: 100vh;
+    color: black;
+}
+
+h3 {
+    font-family: 'ubuntu-bold';
+    text-align: center;
+    background-color: #ffa4a2;
+    padding: 7px 0;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+div#main-container {
+    width: 100%;
+    background-color: #af4448;
+    min-height: 100%;
+}
+
+div#controller {
+    overflow-y: scroll;
+}
+
+div#main-container header {
+    width: 100%;
+    text-align: center;
+    font-family: 'ubuntu-bold';
+    font-size: 2em;
+    color: black;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    background-color: #af4448;
+}
+
+div#main-container header:hover {
+    cursor: pointer;
+    color: white;
+    transition: all ease-in .2s;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fce4ec;
+    border-radius: 8px;
+    color: black;
+    font-family: "Lucida Console", Monaco, monospace;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div#probs_codes_container,
+div#data_container,
+div#encoded_data_container,
+div#data_container2,
+div#stats_container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+div#probs_codes_container,
+div#data_container2,
+div#encoded_data_container,
+div#stats_container {
+    margin-bottom: 20px;
+}
+
+div#encoded_data_container span {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+div#probs_codes_container table {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.column-1 {
+    width: 27.5%;
+}
+
+.column-2 {
+    width: 45%;
+}
+
+.column-3 {
+    width: 27.5%;
+}
+
+div#probs_codes_container table thead tr th {
+    font-family: 'ubuntu-bold';
+    background-color: #fce4ec;
+    padding: 10px 0;
+    font-size: 0.85em;
+}
+
+div#probs_codes_container table thead tr th:hover {
+    cursor: pointer;
+    background-color: #fce4ec;
+    transition: all .2s ease-in;
+}
+
+.sortorder:after {
+  content: '\25b2';
+}
+.sortorder.reverse:after {
+  content: '\25bc';
+}
+
+div#probs_codes_container table tbody tr td {
+    text-align: center;
+    /*background-color: #25262b;*/
+    opacity: 0.8;
+    padding: 3px 0;
+}
+
+div#probs_codes_container table tbody tr td.sign {
+    background-color: #fff;
+}
+
+div#probs_codes_container table tbody tr td.number {
+    background-color: #fff;
+}
+
+div#probs_codes_container table tbody tr td.code {
+    background-color: #fff;
+}
+
+div#probs_codes_container table tbody tr:hover td {
+    opacity: 1;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+
+div#probs_codes_container table tbody tr.active-row td {
+    opacity: 1;
+}
+
+span {
+    transition: ease-in all .2s;
+}
+
+div#data_container2 span {
+    font-family: "Lucida Console", Monaco, monospace;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+div#data_container2 span span.active {
+    background-color: #01172F;
+    transition: ease-in all .2s;
+}
+
+div#encoded_data_container span span.active {
+    background-color: #2d0101;
+    transition: ease-in all .2s;
+}
+
+div#stats_container table {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#params_table tr td:first-child {
+    background-color: #fce4ec;
+    text-align: left;
+    padding-left: 15px;
+    width: 90%;
+}
+
+#params_table tr td:nth-child(2) {
+    background-color: #fce4ec;
+    text-align: right;
+    padding-right: 15px;
+    width: 10%;
+}
+
+div#stats_container table tr td {
+    padding: 5px 0;
+}
+
+div#stats_container #params_table tr td:first-child,
+#stats_table thead tr th {
+    font-family: 'ubuntu-bold';
+}
+
+.column {
+    flex: 1
+}
+
+div#row {
+  display: flex;
+}
+
+div#stats_container #stats_table {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5px;
+}
+
+#stats_table, #params_table, #probs_codes_table {
+    border-collapse: collapse;
+}
+
+#stats_table thead tr:first-child th {
+    background-color: #fce4ec;
+}
+
+#stats_table thead tr:nth-child(2) th {
+    background-color: #fce4ec;
+}
+
+#stats_table thead tr th {
+    padding: 6px 0;
+}
+
+#stats_table tbody tr td {
+    padding: 4px 0;
+    text-align: center;
+    font-family: 'ubuntu-light';
+    background-color: #fce4ec;
+}
+
+footer {
+    background-color: #e57373;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer span#authors {
+    font-family: 'ubuntu-bold';
+}
+
+@media all and (min-height: 800px) {
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 650px) and (min-width: 400px)
+{
+    .column{
+        font-size: 12px;
+    }
+
+}
+
